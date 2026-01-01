@@ -1,0 +1,43 @@
+<%-layout("./layout/boilerplate.ejs")%>
+<body>
+    
+    <form action="/listing" method="post" class=" col-8 offset-2 needs-validation" novalidate enctype="multipart/form-data">
+        <h3>Create New Listing</h3>
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="title" placeholder="enter title" class="form-control" required>
+         <div class="invalid-feedback">
+        Please choose a Title.
+      </div>
+
+        <label for="description" class="form-label">Description:</label>
+        <textarea name="description" placeholder="enter description" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+      Please provide a valid Description.
+    </div>
+         
+          <label for="image" class="form-label">Upload Image:</label>
+         <input type="file" name="image" placeholder="enter image URL" class="form-control">
+      
+
+
+        <label for="price" class="form-label">Price:</label>  
+        <input type="number" name="price" placeholder="enter price" class="form-control" required>
+         <div class="invalid-feedback">
+     please enter price
+    </div>
+        
+        <label for="location" class="form-label">Location:</label>
+         <input type="text" name="location" placeholder="enter location" class="form-control" required>
+         <div class="invalid-feedback">
+      Please provide a valid Location.
+    </div>
+
+         <label for="country" class="form-label">Country:</label>
+        <input type="text" name="country" placeholder="enter country name" class="form-control" required>
+        <div class="invalid-feedback">
+      Please select a valid country.
+    </div>
+       
+        <button class="btn btn-danger mb-2 shadow-lg mt-2">Add</button>
+    </form>
+</body>

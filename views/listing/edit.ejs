@@ -1,0 +1,49 @@
+<%-layout("./layout/boilerplate.ejs")%>
+<body>
+    
+        <form action="/listing/<%=editListing._id%>?_method=put" method="post" class=" col-8 offset-2 needs-validation" novalidate>
+            <h3>Edit listing</h3>
+
+         <label for="title" class="form-label">Title:</label>   
+        <input type="text" name="title" value="<%=editListing.title%>"class="form-control" required>
+        <div class="invalid-feedback">
+        Please choose a Title.
+      </div>
+
+
+          <label for="description" class="form-label">Description:</label>
+        <textarea name="description" class="form-control" required><%=editListing.description%></textarea>
+         <div class="invalid-feedback">
+      Please provide a valid Description.
+    </div>
+
+         <label for="image" class="form-label">Image:</label>
+         <input type="text" name="image" value="<%=editListing.image%>" class="form-control" required>
+          <div class="invalid-feedback">
+      Please provide Image URL.
+    </div>
+
+        <label for="price" class="form-label">Price:</label> 
+        <input type="number" name="price" value="<%=editListing.price%>" class="form-control" required>
+         <div class="invalid-feedback">
+     please enter price
+    </div>
+
+         <label for="location" class="form-label">Location:</label>
+         <input type="text" name="location" value="<%=editListing.location%>" class="form-control" required>
+         <div class="invalid-feedback">
+      Please provide a valid Location.
+    </div>
+
+         <label for="country" class="form-label">Country:</label>
+        <input type="text" name="country" value="<%=editListing.country%>" class="form-control" required>
+       <div class="invalid-feedback">
+      Please select a valid country.
+    </div>
+    <button class="btn btn-danger  shadow-lg mb-2  mt-2">Add</button>
+  </div>
+       
+        
+    </form>
+    
+</body>

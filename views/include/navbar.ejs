@@ -1,0 +1,68 @@
+<style>
+  /* navbar search btn */
+.search-btn{
+  background-color: #ff385c;
+  color: #fff;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+ 
+}
+.search-btn:hover{
+  background-color: #ff385c;
+  color: #fff;
+}
+.search-btn i{
+display: inline;
+margin-right: 10px;
+}
+.search-input{
+  padding: 0.5rem 3rem;
+  border-radius: 1.5rem;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+}
+
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass navbaricon"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mobile-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active"  href="/listing">Explore</a>
+      </div>
+
+
+
+      <div class="ms-auto">
+         <form class="d-flex" role="search">
+      <input class="form-control me-2 search-input" type="search" placeholder="Search destination">
+      <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    </form>
+      </div>
+
+
+      <div  class="navbar-nav ms-auto">
+        <a class="nav-link active" href="/listing/new">Airbnb your home</a>
+  
+        <%if(!currUser){%>
+         <a class="nav-link active" href="/signup"><b>Signup</b></a>
+        <a class="nav-link active" href="/login"><b>Login</b></a>
+       <% }%>
+        <%if(currUser){%>
+       <a class="nav-link active" href="/logout"><b>Logout</b></a>
+      </div>
+      <%  }%>
+      <button class="btn btn-outline-secondary ms-2" id="themeToggle">
+  🌙
+</button>
+
+        
+     
+    </div>
+  </div>
+</nav>
